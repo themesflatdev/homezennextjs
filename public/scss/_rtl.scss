@@ -97,6 +97,15 @@
     transform: scaleX(-1);
 }
 
+[dir="rtl"] .wd-find-select .tf-btn {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+}
+
+
+
 // Data that is always written/read LTR even on an RTL page - keep it
 // legible instead of literally mirroring the characters.
 [dir="rtl"] input[type="email"],

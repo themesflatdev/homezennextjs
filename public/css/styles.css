@@ -10215,6 +10215,23 @@ tr {
   text-align: right;
 }
 
+[dir="rtl"] .wd-find-select .tf-btn {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-top-left-radius: 4px;
+  border-bottom-left-radius: 4px;
+}
+
+[dir="rtl"] .wd-find-select.no-left-round{
+  border-top-left-radius: 12px;
+  border-top-right-radius: 0;
+}
+
+[dir="rtl"] .wd-filter-select {
+  border-top-left-radius: 12px;
+  border-top-right-radius: 0;
+}
+
 .leaflet-popup-content {
   width: auto !important;
   margin: 0px !important;
