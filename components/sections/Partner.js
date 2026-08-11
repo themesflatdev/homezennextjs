@@ -1,6 +1,7 @@
 'use client'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useDirection } from "@/context/DirectionContext"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -35,13 +36,14 @@ const swiperOptions = {
 }
 
 export default function Partner() {
+	const { direction } = useDirection()
 	return (
 		<>
 
 			<section className="flat-section-v4 flat-partner">
 				<div className="container">
 					<div className="wrap-partner swiper tf-sw-partner">
-						<Swiper {...swiperOptions} className="swiper-wrapper">
+						<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 							<SwiperSlide>
 								<div className="partner-item">
 									<svg width={182} height={35} viewBox="0 0 182 35" fill="none" xmlns="http://www.w3.org/2000/svg">

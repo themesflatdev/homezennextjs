@@ -1,6 +1,7 @@
 'use client'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useDirection } from "@/context/DirectionContext"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -19,6 +20,7 @@ const swiperOptions = {
 import Link from "next/link"
 
 export default function Property3() {
+	const { direction } = useDirection()
 	return (
 		<>
 
@@ -30,7 +32,7 @@ export default function Property3() {
 						</div>
 						<div className="box-inner-right">
 							<div className="swiper tf-sw-property">
-								<Swiper {...swiperOptions} className="swiper-wrapper">
+								<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 									<SwiperSlide>
 										<div className="content-property">
 											<div className="box-title">

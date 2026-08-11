@@ -2,6 +2,7 @@
 'use client'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useDirection } from "@/context/DirectionContext"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -33,6 +34,7 @@ const swiperOptions = {
 	},
 }
 export default function Testimonial4() {
+	const { direction } = useDirection()
 	return (
 		<>
 
@@ -43,7 +45,7 @@ export default function Testimonial4() {
 						<h4 className="mt-4">What’s people say’s</h4>
 					</div>
 					<div className="swiper tf-sw-testimonial">
-						<Swiper {...swiperOptions} className="swiper-wrapper">
+						<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 							<SwiperSlide>
 								<div className="box-tes-item style-2">
 									<ul className="list-star">

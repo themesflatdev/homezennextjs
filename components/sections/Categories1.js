@@ -2,6 +2,7 @@
 import Link from "next/link"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useDirection } from "@/context/DirectionContext"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -34,6 +35,7 @@ const swiperOptions = {
 }
 
 export default function Categories1() {
+	const { direction, isRTL } = useDirection()
 	return (
 		<>
 
@@ -44,11 +46,11 @@ export default function Categories1() {
 							<div className="text-subtitle text-primary">Property Type</div>
 							<h4 className="mt-4">Try Searching For</h4>
 						</div>
-						<Link href="#" className="btn-view"><span className="text">View All Services</span> <span className="icon icon-arrow-right2" /> </Link>
+						<Link href="#" className="btn-view"><span className="text">View All Services</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 					</div>
 					<div className="wrap-categories  wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration="2000ms">
 						<div className="swiper tf-sw-categories" data-preview-lg={6} data-preview-md={4} data-preview-sm={3} data-space={30}>
-							<Swiper {...swiperOptions} className="swiper-wrapper">
+							<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 								<SwiperSlide>
 									<Link href="#" className="homeya-categories">
 										<div className="icon-box">

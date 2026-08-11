@@ -1,7 +1,9 @@
-
+'use client'
 import Link from "next/link"
+import { useDirection } from "@/context/DirectionContext"
 
 export default function Location3() {
+	const { isRTL } = useDirection()
 	return (
 		<>
 
@@ -12,7 +14,7 @@ export default function Location3() {
 							<div className="text-subtitle text-primary">Explore Cities</div>
 							<h4 className="mt-4">Properties By Cities</h4>
 						</div>
-						<Link href="#" className="btn-view"><span className="text">View All Properties</span> <span className="icon icon-arrow-right2" /> </Link>
+						<Link href="#" className="btn-view"><span className="text">View All Properties</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 					</div>
 					<div className="grid-location-v2 wow fadeInUpSmall" data-wow-delay=".2s" data-wow-duration="2000ms">
 						<div className="box-location-v3 hover-img hover-btn-view">
@@ -22,7 +24,7 @@ export default function Location3() {
 							<div className="content">
 								<h6><Link href="#" className="link">Dallas</Link></h6>
 								<p>263 properties</p>
-								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className="icon icon-arrow-right2" /> </Link>
+								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 							</div>
 						</div>
 						<div className="box-location-v3 hover-img hover-btn-view active">
@@ -32,7 +34,7 @@ export default function Location3() {
 							<div className="content">
 								<h6><Link href="#" className="link">Atlanta</Link></h6>
 								<p>275 properties</p>
-								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className="icon icon-arrow-right2" /> </Link>
+								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 							</div>
 						</div>
 						<div className="box-location-v3 hover-img hover-btn-view">
@@ -42,7 +44,7 @@ export default function Location3() {
 							<div className="content">
 								<h6><Link href="#" className="link">Orlando</Link></h6>
 								<p>256 properties</p>
-								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className="icon icon-arrow-right2" /> </Link>
+								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 							</div>
 						</div>
 						<div className="box-location-v3 hover-img hover-btn-view">
@@ -52,7 +54,7 @@ export default function Location3() {
 							<div className="content">
 								<h6><Link href="#" className="link">Miami</Link></h6>
 								<p>312 properties</p>
-								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className="icon icon-arrow-right2" /> </Link>
+								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 							</div>
 						</div>
 						<div className="box-location-v3 hover-img hover-btn-view">
@@ -62,7 +64,7 @@ export default function Location3() {
 							<div className="content">
 								<h6><Link href="#" className="link">Houston</Link></h6>
 								<p>237 properties</p>
-								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className="icon icon-arrow-right2" /> </Link>
+								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 							</div>
 						</div>
 						<div className="box-location-v3 hover-img hover-btn-view">
@@ -72,7 +74,7 @@ export default function Location3() {
 							<div className="content">
 								<h6><Link href="#" className="link">Phoenix</Link></h6>
 								<p>221 properties</p>
-								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className="icon icon-arrow-right2" /> </Link>
+								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 							</div>
 						</div>
 						<div className="box-location-v3 hover-img hover-btn-view">
@@ -82,7 +84,7 @@ export default function Location3() {
 							<div className="content">
 								<h6><Link href="#" className="link">Seattle</Link></h6>
 								<p>188 properties</p>
-								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className="icon icon-arrow-right2" /> </Link>
+								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 							</div>
 						</div>
 						<div className="box-location-v3 hover-img hover-btn-view">
@@ -92,7 +94,7 @@ export default function Location3() {
 							<div className="content">
 								<h6><Link href="#" className="link">Denver</Link></h6>
 								<p>193 properties</p>
-								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className="icon icon-arrow-right2" /> </Link>
+								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 							</div>
 						</div>
 						<div className="box-location-v3 hover-img hover-btn-view">
@@ -102,7 +104,7 @@ export default function Location3() {
 							<div className="content">
 								<h6><Link href="#" className="link">Austin</Link></h6>
 								<p>309 properties</p>
-								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className="icon icon-arrow-right2" /> </Link>
+								<Link href="#" className="btn-view style-1"><span className="text">Explore Now</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 							</div>
 						</div>
 					</div>

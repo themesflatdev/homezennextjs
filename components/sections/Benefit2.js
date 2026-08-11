@@ -1,6 +1,7 @@
 'use client'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useDirection } from "@/context/DirectionContext"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -19,6 +20,7 @@ const swiperOptions = {
 import Link from "next/link"
 
 export default function Benefit2() {
+	const { direction } = useDirection()
 	return (
 		<>
 
@@ -40,7 +42,7 @@ export default function Benefit2() {
 						</div>
 						<div className="col-lg-8 wow fadeIn" data-wow-delay=".4s" data-wow-duration="2000ms">
 							<div className="swiper tf-sw-benefit">
-								<Swiper {...swiperOptions} className="swiper-wrapper">
+								<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 									<SwiperSlide>
 										<div className="box-right">
 											<div className="box-benefit style-1">

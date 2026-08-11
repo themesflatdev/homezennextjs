@@ -58,6 +58,26 @@
 }
 
 
+// icon nudges forward (toward reading direction) and back on hover -
+// see _rtl.scss for the mirrored `link-icon-rtl` keyframes used under [dir="rtl"]
+@keyframes link-icon {
+    49% {
+        opacity: 1;
+        transform: translateX(10px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 .hover-btn-view:hover {
     .btn-view.style-1 {
         .icon {
@@ -67,8 +87,8 @@
             color: $on-surface;
             &::before {
                 width: 100%;
-                left: 0;
-                right: auto;
+                inset-inline-start: 0;
+                inset-inline-end: auto;
             }
         }
     }
@@ -85,7 +105,7 @@
         &::before {
             position: absolute;
             content: "";
-            left: 0;
+            inset-inline-start: 0;
             bottom: 0;
             width: 100%;
             height: 2px;
@@ -110,8 +130,8 @@
             color: $variant-1;
             &::before {
                 width: 0;
-                left: auto;
-                right: 0;
+                inset-inline-start: auto;
+                inset-inline-end: 0;
                 -webkit-transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
                 -o-transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
                 transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;

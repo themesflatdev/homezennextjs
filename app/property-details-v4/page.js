@@ -8,6 +8,7 @@ import 'swiper/css/free-mode'
 import 'swiper/css/thumbs'
 import { Autoplay, FreeMode, Navigation, Pagination, Thumbs } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useDirection } from "@/context/DirectionContext"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -41,6 +42,7 @@ const swiperOptions = {
 	},
 }
 export default function PropertyDetailsV4() {
+	const { direction } = useDirection()
 	const [thumbsSwiper, setThumbsSwiper] = useState(null)
 
 	// Swiper options for the main slider
@@ -124,7 +126,7 @@ export default function PropertyDetailsV4() {
 							<div className="single-property-gallery">
 								<div className="position-relative">
 									<div className="swiper sw-single">
-										<Swiper {...mainSwiperOptions} className="swiper-wrapper">
+										<Swiper {...mainSwiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 											<SwiperSlide>
 												<div className="image-sw-single">
 													<img src="/images/banner/banner-property-12.jpg" alt="images" />
@@ -173,7 +175,7 @@ export default function PropertyDetailsV4() {
 									</div>
 								</div>
 								<div className="swiper thumbs-sw-pagi">
-									<Swiper {...thumbnailSwiperOptions} onSwiper={setThumbsSwiper} className="swiper-wrapper">
+									<Swiper {...thumbnailSwiperOptions} onSwiper={setThumbsSwiper} key={direction} dir={direction} className="swiper-wrapper">
 										<SwiperSlide>
 											<div className="img-thumb-pagi">
 												<img src="/images/banner/thumb-sw1.jpg" alt="images" />
@@ -839,7 +841,7 @@ export default function PropertyDetailsV4() {
 								<h4 className="mt-4">The Most Recent Estate</h4>
 							</div>
 							<div className="swiper tf-latest-property" data-preview-lg={3} data-preview-md={2} data-preview-sm={2} data-space={30} data-loop="true">
-								<Swiper {...swiperOptions} className="swiper-wrapper">
+								<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 									<SwiperSlide>
 										<div className="homeya-box style-2">
 											<div className="archive-top">

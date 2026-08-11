@@ -5,8 +5,10 @@ import 'swiper/css/free-mode'
 import 'swiper/css/thumbs'
 import { FreeMode, Navigation, Thumbs } from 'swiper/modules'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { useDirection } from "@/context/DirectionContext"
 
 export default function Slider4() {
+	const { direction } = useDirection()
 	const [thumbsSwiper, setThumbsSwiper] = useState(null)
 
 	// Swiper options for the main slider
@@ -40,7 +42,7 @@ export default function Slider4() {
 			<section className="flat-slider home-5">
 				<div className="wrap-slider-swiper">
 					<div className="swiper-container thumbs-swiper-column">
-						<Swiper {...mainSwiperOptions} className="swiper-wrapper">
+						<Swiper {...mainSwiperOptions} key={`main-${direction}`} dir={direction} className="swiper-wrapper">
 							<SwiperSlide>
 								<div className="box-img">
 									<img src="/images/slider/slider-5.jpg" alt="images" />
@@ -64,7 +66,7 @@ export default function Slider4() {
 						</Swiper>
 					</div>
 					<div className="swiper-container thumbs-swiper-column1 swiper-pagination5">
-						<Swiper {...thumbnailSwiperOptions} onSwiper={setThumbsSwiper} className="swiper-wrapper">
+						<Swiper {...thumbnailSwiperOptions} onSwiper={setThumbsSwiper} key={`thumbnail-${direction}`} dir={direction} className="swiper-wrapper">
 							<SwiperSlide>
 								<div className="image-detail">
 									<img src="/images/slider/slider-pagi.jpg" alt="images" />

@@ -110,7 +110,7 @@ section {
 -------------------------------------------------------------- */
 
 html {
-    margin-right: 0 !important;
+    margin-inline-end: 0 !important;
 }
 * {
     margin: 0;
@@ -136,11 +136,11 @@ img {
 }
 
 .row {
-    margin-right: -15px;
-    margin-left: -15px;
+    margin-inline-end: -15px;
+    margin-inline-start: -15px;
     > * {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-inline-start: 15px;
+        padding-inline-end: 15px;
     }
 }
 
@@ -148,7 +148,7 @@ ul,
 li {
     list-style-type: none;
     margin-bottom: 0;
-    padding-left: 0;
+    padding-inline-start: 0;
     list-style: none;
 }
 
@@ -185,8 +185,8 @@ li {
 .container2,
 .container-fluid,
 .container {
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-inline-start: 15px;
+    padding-inline-end: 15px;
 }
 .container-full {
     max-width: 100%;
@@ -194,9 +194,9 @@ li {
 
 .cus-layout-1 {
     width: calc(100vw - ((100vw - 1290px) / 2));
-    margin-right: unset !important;
+    margin-inline-end: unset !important;
     max-width: 100%;
-    margin-left: auto;
+    margin-inline-start: auto;
 }
 
 // form //

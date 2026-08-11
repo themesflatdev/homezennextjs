@@ -1,6 +1,7 @@
 import Link from "next/link"
 import Menu from "../Menu"
 import MobileMenu from "../MobileMenu"
+import DirectionToggle from "../../elements/DirectionToggle"
 
 export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isLogin, handleLogin, hcls, handleRegister }) {
 	return (
@@ -34,6 +35,7 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isLogi
 									{/* Main Menu End*/}
 								</div>
 								<div className="header-account">
+									<DirectionToggle className="header-direction-toggle" />
 									<div className="register">
 										<ul className="d-flex">
 											<li><a onClick={handleLogin}>Login</a></li>
@@ -75,6 +77,9 @@ export default function Header1({ scroll, isMobileMenu, handleMobileMenu, isLogi
 								<div className="box d-flex align-items-center">
 									<span className="icon icon-mail" />
 									<div>themesflat@gmail.com</div>
+								</div>
+								<div className="box d-flex align-items-center">
+									<DirectionToggle />
 								</div>
 							</div>
 						</div>

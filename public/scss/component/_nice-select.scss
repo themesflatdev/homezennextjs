@@ -32,14 +32,14 @@
 
 .nice-select:after {
     border-bottom: 1.7px solid $on-surface;
-    border-right: 1.7px solid $on-surface;
+    border-inline-end: 1.7px solid $on-surface;
     content: "";
     height: 8px;
     width: 8px;
     margin-top: -6px;
     pointer-events: none;
     position: absolute;
-    right: 18px;
+    inset-inline-end: 18px;
     top: 50%;
     -webkit-transform-origin: 66% 66%;
     -ms-transform-origin: 66% 66%;
@@ -86,17 +86,17 @@
 }
 
 .nice-select.wide .list {
-    left: 0 !important;
-    right: 0 !important;
+    inset-inline-start: 0 !important;
+    inset-inline-end: 0 !important;
 }
 
 .nice-select.right {
-    float: right;
+    float: inline-end;
 }
 
 .nice-select.right .list {
-    left: auto;
-    right: 0;
+    inset-inline-start: auto;
+    inset-inline-end: 0;
 }
 
 .nice-select.small {
@@ -127,7 +127,7 @@
     pointer-events: none;
     position: absolute;
     top: 100%;
-    left: 0;
+    inset-inline-start: 0;
     -webkit-transform-origin: 50% 0;
     -ms-transform-origin: 50% 0;
     transform-origin: 50% 0;
@@ -197,10 +197,10 @@
     list-style: none;
     min-height: 40px;
     outline: none;
-    padding-left: 18px;
-    padding-right: 29px;
+    padding-inline-start: 18px;
+    padding-inline-end: 29px;
     font-size: 16px;
-    text-align: left;
+    text-align: start;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
     color: $on-surface;
@@ -236,6 +236,6 @@
 .box-select-1 {
     .nice-select {
         min-width: 120px;
-        padding-right: 40px;
+        padding-inline-end: 40px;
     }
 }

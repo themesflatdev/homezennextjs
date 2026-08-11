@@ -81,7 +81,9 @@ import TabNav from "@/components/elements/TabNav"
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 import VideoPopup from "@/components/elements/VideoPopup"
+import { useDirection } from "@/context/DirectionContext"
 export default function PropertyDetailsV1() {
+	const { direction } = useDirection()
 	const [isAccordion, setIsAccordion] = useState(1)
 
 	const handleAccordion = (key) => {
@@ -94,7 +96,7 @@ export default function PropertyDetailsV1() {
 				<div>
 					<section className="flat-location flat-slider-detail-v1">
 						<div className="swiper tf-sw-location">
-							<Swiper {...swiperOptions} className="swiper-wrapper">
+							<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 								<SwiperSlide>
 									<Link href="/images/banner/banner-property-1.jpg" data-fancybox="gallery" className="box-imgage-detail d-block">
 										<img src="/images/banner/banner-property-1.jpg" alt="img-property" />
@@ -939,7 +941,7 @@ export default function PropertyDetailsV1() {
 								<h4 className="mt-4">The Most Recent Estate</h4>
 							</div>
 							<div className="swiper tf-latest-property" data-preview-lg={3} data-preview-md={2} data-preview-sm={2} data-space={30} data-loop="true">
-								<Swiper {...swiperOptions2} className="swiper-wrapper">
+								<Swiper {...swiperOptions2} key={direction} dir={direction} className="swiper-wrapper">
 									<SwiperSlide>
 										<div className="homeya-box style-2">
 											<div className="archive-top">

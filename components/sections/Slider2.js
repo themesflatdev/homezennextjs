@@ -2,6 +2,7 @@
 import { useState } from "react"
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useDirection } from "@/context/DirectionContext"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -21,6 +22,7 @@ import Link from "next/link"
 import AdvancedFilter from "../elements/AdvancedFilter"
 import { TypeAnimation } from "react-type-animation"
 export default function Slider2() {
+	const { direction } = useDirection()
 	const [isTab, setIsTab] = useState(1)
 	const [isVisible, setIsVisible] = useState(true)
 	const handleTab = (i) => {
@@ -99,7 +101,7 @@ export default function Slider2() {
 				</div>
 				<div className="img-banner-right">
 					<div className="swiper slider-sw-home2">
-						<Swiper {...swiperOptions} className="swiper-wrapper">
+						<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 							<SwiperSlide>
 								<div className="slider-home2 img-animation wow">
 									<img src="/images/slider/slider-2.jpg" alt="images" />

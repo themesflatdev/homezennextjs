@@ -17,10 +17,10 @@
             top: 50%;
             transform: translateY(-50%);
             &.swiper-nav-next {
-                left: -65px;
+                inset-inline-start: -65px;
             }
             &.swiper-nav-prev {
-                right: -65px;
+                inset-inline-end: -65px;
             }
         }
     }
@@ -32,10 +32,10 @@
             transform: translateY(-50%);
             z-index: 123;
             &.swiper-nav-next {
-                left: -30px;
+                inset-inline-start: -30px;
             }
             &.swiper-nav-prev {
-                right: -30px;
+                inset-inline-end: -30px;
             }
         }
     }
@@ -53,7 +53,7 @@
         }
         .single-property-feature {
             .wrap-feature {
-                padding-right: 100px;
+                padding-inline-end: 100px;
             }
         }
     }
@@ -69,7 +69,7 @@
 // max-width:
 @media only screen and (max-width: 1800px) {
     .layout-wrap .wrap-table table tbody td:nth-child(3) {
-        padding-left: 20px;
+        padding-inline-start: 20px;
     }
     .layout-wrap .main-content-inner {
         padding: 80px 15px;
@@ -79,7 +79,7 @@
 @media only screen and (max-width: 1520px) {
     .main-header .main-menu {
         position: relative;
-        margin-left: 1px;
+        margin-inline-start: 1px;
     }
     .wrap-categories {
         .box-navigation {
@@ -155,28 +155,28 @@
     }
     .flat-property-detail {
         .header-property-detail {
-            margin-left: 0;
-            margin-right: 0;
+            margin-inline-start: 0;
+            margin-inline-end: 0;
         }
     }
     .flat-property-detail-v2 {
         .wrapper-sidebar-right {
-            padding-left: 0px;
+            padding-inline-start: 0px;
         }
     }
     .single-property-contact .box-avatar {
         flex-wrap: wrap;
     }
     .single-property-gallery .box-navigation .navigation.swiper-nav-prev {
-        right: 0;
+        inset-inline-end: 0;
     }
     .single-property-gallery .box-navigation .navigation.swiper-nav-next {
-        left: 0;
+        inset-inline-start: 0;
     }
 
     .overlay-dashboard {
         position: fixed;
-        right: 0;
+        inset-inline-end: 0;
         top: 0;
         width: 100%;
         height: 100%;
@@ -192,7 +192,7 @@
             transform: translateX(-100%);
         }
         .main-content {
-            padding-left: 0;
+            padding-inline-start: 0;
         }
         &.full-width {
             .sidebar-menu-dashboard {
@@ -213,24 +213,24 @@
 
 @media only screen and (max-width: 1350px) {
     .flat-testimonial {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-inline-start: 15px;
+        padding-inline-end: 15px;
     }
     .wrap-service-v2 {
         .box-left {
-            padding-right: 0px;
+            padding-inline-end: 0px;
             .list-view {
                 li {
                     &:last-child,
                     &:nth-child(2) {
-                        padding-left: 0px;
+                        padding-inline-start: 0px;
                     }
                 }
             }
         }
         .box-right {
-            padding-left: 25px;
-            padding-right: 25px;
+            padding-inline-start: 25px;
+            padding-inline-end: 25px;
         }
     }
     .header-dashboard {
@@ -259,7 +259,7 @@
     }
     .wrap-service-v4 {
         .inner-service-right {
-            padding-right: 0;
+            padding-inline-end: 0;
         }
     }
     .wrap-banner {
@@ -270,7 +270,7 @@
         }
     }
     .header-style-3 .nav-outer {
-        padding-left: 20px;
+        padding-inline-start: 20px;
     }
     .flat-filter-search-v2 {
         .flat-tab-form {
@@ -284,13 +284,13 @@
         &.home-3 {
             .slider-content {
                 .heading {
-                    padding-right: 10%;
+                    padding-inline-end: 10%;
                 }
             }
         }
         &.home-5 {
             .thumbs-swiper-column1 {
-                right: 15px;
+                inset-inline-end: 15px;
             }
             .thumbs-swiper-column {
                 .box-img {
@@ -305,14 +305,14 @@
     }
 
     .main-header .main-menu .navigation > li {
-        padding-right: 24px;
+        padding-inline-end: 24px;
     }
     .header-account ul {
-        margin-right: 6px;
+        margin-inline-end: 6px;
     }
     .main-header .main-menu .navigation > li.dropdown2 > a::after {
         font-size: 12px;
-        right: -12px;
+        inset-inline-end: -12px;
     }
     .wrap-counter {
         flex-wrap: wrap;
@@ -326,7 +326,7 @@
     }
     .wrap-service-v2 {
         .box-left {
-            padding-right: 0px;
+            padding-inline-end: 0px;
             .list-view {
                 display: flex;
                 flex-wrap: wrap;
@@ -356,7 +356,7 @@
     .wrap-banner {
         .box-left {
             padding: 0;
-            padding-left: 60px;
+            padding-inline-start: 60px;
         }
         .box-right {
             flex-shrink: unset;
@@ -451,10 +451,10 @@
         display: block !important;
     }
     .header-account ul {
-        margin-right: 20px;
+        margin-inline-end: 20px;
     }
     .header-account {
-        margin-right: 50px;
+        margin-inline-end: 50px;
         .dropdown-menu{
             margin-top: 19px !important;
         }
@@ -464,7 +464,7 @@
     }
     .header-style-3 {
         .header-account {
-            margin-right: 0;
+            margin-inline-end: 0;
         }
     }
 
@@ -477,12 +477,12 @@
     .footer-cl-1,
     .footer-cl-2 {
         margin-bottom: 50px;
-        margin-left: 0;
-        margin-right: 0;
+        margin-inline-start: 0;
+        margin-inline-end: 0;
     }
     .footer-cl-3,
     .footer-cl-4 {
-        margin-left: 0px;
+        margin-inline-start: 0px;
     }
     .flat-title-page h2 {
         font-size: 46px;
@@ -492,7 +492,7 @@
         padding: 60px 0px 60px;
     }
     .flat-blog-list {
-        padding-right: 0;
+        padding-inline-end: 0;
         margin-bottom: 40px;
     }
     .flat-latest-post .flat-blog-item {
@@ -524,7 +524,7 @@
                 .heading {
                     .title,
                     .subtitle {
-                        padding-right: 0;
+                        padding-inline-end: 0;
                     }
                 }
             }
@@ -535,7 +535,7 @@
                 .heading {
                     .title,
                     .subtitle {
-                        padding-right: 0;
+                        padding-inline-end: 0;
                     }
                 }
             }
@@ -554,7 +554,7 @@
             flex-wrap: wrap;
             padding: 0;
             .form-style {
-                border-right: 0;
+                border-inline-end: 0;
                 label {
                     margin-bottom: 8px;
                 }
@@ -600,8 +600,8 @@
     }
     // section
     .flat-location {
-        padding-left: 15px;
-        padding-right: 15px;
+        padding-inline-start: 15px;
+        padding-inline-end: 15px;
         .navigation {
             width: 44px;
             height: 44px;
@@ -609,10 +609,10 @@
                 font-size: 18px;
             }
             &.swiper-nav-next {
-                left: 15px;
+                inset-inline-start: 15px;
             }
             &.swiper-nav-prev {
-                right: 15px;
+                inset-inline-end: 15px;
             }
         }
     }
@@ -672,8 +672,8 @@
         border-radius: 0;
         border-bottom-left-radius: 16px;
         border-bottom-right-radius: 16px;
-        margin-left: 0;
-        padding-left: 60px;
+        margin-inline-start: 0;
+        padding-inline-start: 60px;
     }
     .flat-service-v5 {
         padding-top: 460px;
@@ -714,7 +714,7 @@
     .wrap-benefit-v2 {
         .box-right {
             margin-top: 30px;
-            padding-left: 0;
+            padding-inline-start: 0;
         }
     }
     .wrap-service-v4 {
@@ -818,7 +818,7 @@
         }
     }
     .single-property-video {
-        padding-right: 0;
+        padding-inline-end: 0;
     }
     .single-property-feature .wrap-feature {
         gap: 30px;
@@ -826,7 +826,7 @@
     .wrapper-sidebar-right {
         margin-bottom: 0;
         margin-top: 30px;
-        padding-left: 0;
+        padding-inline-start: 0;
     }
     .flat-property-detail .header-property-detail {
         padding: 30px 15px;
@@ -838,14 +838,14 @@
         .header-property-detail {
             .content-top,
             .content-bottom {
-                padding-left: 15px;
-                padding-right: 15px;
+                padding-inline-start: 15px;
+                padding-inline-end: 15px;
             }
         }
         .single-property-overview,
         .single-property-desc {
-            padding-left: 15px;
-            padding-right: 15px;
+            padding-inline-start: 15px;
+            padding-inline-end: 15px;
         }
     }
     .single-property-nearby .grid-3 {
@@ -869,13 +869,13 @@
     .flat-slider-contact {
         .content-wrap {
             .content-left {
-                padding-right: 0;
+                padding-inline-end: 0;
                 margin-bottom: 30px;
             }
         }
     }
     .flat-contact .contact-content {
-        padding-right: 0;
+        padding-inline-end: 0;
         margin-bottom: 30px;
     }
     .layout-wrap .main-content-inner .wrapper-content .wd-filter {
@@ -889,7 +889,7 @@
         margin-top: 30px;
     }
     .box-amenities-property {
-        padding-right: 0;
+        padding-inline-end: 0;
     }
     .box-floor-property {
         padding: 15px;
@@ -920,7 +920,7 @@
         display: none;
     }
     .header-account ul {
-        margin-right: 0px;
+        margin-inline-end: 0px;
     }
     .wrap-form-comment .group-ip {
         grid-template-columns: 1fr;
@@ -936,15 +936,15 @@
         .post-navigation {
             grid-template-columns: 1fr;
             .previous-post {
-                padding-right: 0;
+                padding-inline-end: 0;
                 &::after {
                     content: none;
                 }
             }
             .next-post {
                 margin-top: 20px;
-                text-align: left;
-                padding-left: 0;
+                text-align: start;
+                padding-inline-start: 0;
             }
         }
     }
@@ -956,7 +956,7 @@
     }
     .flat-quote {
         padding: 24px;
-        padding-left: 32px;
+        padding-inline-start: 32px;
         .quote {
             font-size: 22px;
             line-height: 28px;
@@ -1002,7 +1002,7 @@
         }
     }
     .header-dashboard .header-account .box-avatar {
-        margin-right: 0;
+        margin-inline-end: 0;
     }
     .widget-box-2 {
         .grid-2,
@@ -1059,10 +1059,10 @@
                 line-height: 28px;
             }
             .box-avatar {
-                left: -44px;
+                inset-inline-start: -44px;
             }
             .box-trader {
-                right: -34px;
+                inset-inline-end: -34px;
 
                 .content {
                     padding: 5px 15px;
@@ -1097,8 +1097,8 @@
     .flat-slider {
         &.home-5 {
             .info-box {
-                right: 15px;
-                left: 15px;
+                inset-inline-end: 15px;
+                inset-inline-start: 15px;
             }
         }
     }
@@ -1113,8 +1113,8 @@
                     line-height: 30px;
                 }
                 .content {
-                    padding-left: 20px;
-                    padding-right: 20px;
+                    padding-inline-start: 20px;
+                    padding-inline-end: 20px;
                     .note {
                         font-size: 16px;
                         line-height: 26px;
@@ -1177,7 +1177,7 @@
             .box-avatar {
                 top: 20%;
                 padding: 8px;
-                padding-right: 16px;
+                padding-inline-end: 16px;
                 gap: 8px;
             }
             .box-trader {
@@ -1252,7 +1252,7 @@
         grid-template-columns: 1fr;
         .label {
             width: auto;
-            margin-right: 20px;
+            margin-inline-end: 20px;
         }
     }
     .single-property-loan .box-loan-calc {

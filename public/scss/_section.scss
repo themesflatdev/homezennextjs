@@ -73,7 +73,7 @@
 	.date-post {
 		z-index: 1;
 		position: absolute;
-		left: 0;
+		inset-inline-start: 0;
 		bottom: 0;
 		display: inline-block;
 		font-family: $font-2;
@@ -117,8 +117,8 @@
 			position: absolute;
 			z-index: 12;
 			bottom: 20px;
-			left: 20px;
-			right: 20px;
+			inset-inline-start: 20px;
+			inset-inline-end: 20px;
 
 			.title {
 				color: $white;
@@ -142,8 +142,8 @@
 		&::after {
 			content: "";
 			position: absolute;
-			left: 0;
-			right: 0;
+			inset-inline-start: 0;
+			inset-inline-end: 0;
 			bottom: 0;
 			width: 100%;
 			height: 219px;
@@ -169,8 +169,8 @@
 
 		&:not(:first-child) {
 			color: $variant-1;
-			margin-left: 4px;
-			padding-left: 8px;
+			margin-inline-start: 4px;
+			padding-inline-start: 8px;
 			position: relative;
 
 			&::before {
@@ -178,7 +178,7 @@
 				content: "";
 				width: 1px;
 				background-color: $outline;
-				left: 0;
+				inset-inline-start: 0;
 				top: 5px;
 				bottom: 5px;
 			}
@@ -193,7 +193,7 @@
 }
 
 .flat-blog-list {
-	padding-right: 6%;
+	padding-inline-end: 6%;
 
 	.flat-blog-item {
 		margin-bottom: 40px;
@@ -326,8 +326,8 @@
 						height: 1px;
 						bottom: 0px;
 						position: absolute;
-						left: auto;
-						right: 0;
+						inset-inline-start: auto;
+						inset-inline-end: 0;
 						z-index: 1;
 						-webkit-transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
 						-o-transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
@@ -349,8 +349,8 @@
 					&:first-child {
 						&::before {
 							width: 100%;
-							left: 0;
-							right: auto;
+							inset-inline-start: 0;
+							inset-inline-end: auto;
 						}
 					}
 				}
@@ -382,8 +382,8 @@
 				height: 1px;
 				bottom: 0px;
 				position: absolute;
-				left: auto;
-				right: 0;
+				inset-inline-start: auto;
+				inset-inline-end: 0;
 				z-index: 1;
 				-webkit-transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
 				-o-transition: width 0.6s cubic-bezier(0.25, 0.8, 0.25, 1) 0s;
@@ -397,8 +397,8 @@
 
 				&::before {
 					width: 100%;
-					left: 0;
-					right: auto;
+					inset-inline-start: 0;
+					inset-inline-end: auto;
 				}
 			}
 		}
@@ -425,7 +425,7 @@
 		border-bottom: 1px solid $outline;
 
 		.previous-post {
-			padding-right: 22%;
+			padding-inline-end: 22%;
 			position: relative;
 
 			&::after {
@@ -433,15 +433,15 @@
 				content: "";
 				width: 1px;
 				background-color: $outline;
-				right: 0;
+				inset-inline-end: 0;
 				top: 13px;
 				bottom: 13px;
 			}
 		}
 
 		.next-post {
-			text-align: right;
-			padding-left: 30%;
+			text-align: end;
+			padding-inline-start: 30%;
 		}
 
 		.subtitle {
@@ -472,7 +472,7 @@
 	padding: 32px 40px;
 	border-radius: 12px;
 	background-color: $surface;
-	border-left: 4px solid $primary;
+	border-inline-start: 4px solid $primary;
 
 	.quote {
 		font-size: 24px;
@@ -490,14 +490,14 @@
 		letter-spacing: 0.8px;
 		font-weight: 700;
 		position: relative;
-		padding-left: 28px;
+		padding-inline-start: 28px;
 
 		&::before {
 			position: absolute;
 			content: "";
 			height: 1px;
 			width: 20px;
-			left: 10px;
+			inset-inline-start: 10px;
 			top: 50%;
 			transform: translateX(-50%);
 			background-color: $variant-1;
@@ -784,8 +784,8 @@
 		display: block;
 
 		.top {
-			left: 16px;
-			right: 16px;
+			inset-inline-start: 16px;
+			inset-inline-end: 16px;
 			top: 16px;
 			display: flex;
 			justify-content: space-between;
@@ -828,7 +828,7 @@
 
 		.bottom {
 			position: absolute;
-			left: 16px;
+			inset-inline-start: 16px;
 			bottom: 16px;
 			z-index: 1;
 		}
@@ -837,8 +837,8 @@
 			position: absolute;
 			content: "";
 			top: 0;
-			left: 0;
-			right: 0;
+			inset-inline-start: 0;
+			inset-inline-end: 0;
 			bottom: 0;
 			background-color: $rgba-black-hover;
 			opacity: 0;
@@ -1021,8 +1021,8 @@
 				content: "";
 				position: absolute;
 				top: unset;
-				left: 0;
-				right: 0;
+				inset-inline-start: 0;
+				inset-inline-end: 0;
 				bottom: 0;
 				width: 100%;
 				height: 132px;
@@ -1064,8 +1064,8 @@
 
 			.content {
 				position: absolute;
-				left: 16px;
-				right: 16px;
+				inset-inline-start: 16px;
+				inset-inline-end: 16px;
 				bottom: 16px;
 				z-index: 50;
 				padding: 0;
@@ -1091,8 +1091,8 @@
 				content: "";
 				position: absolute;
 				top: unset;
-				left: 0;
-				right: 0;
+				inset-inline-start: 0;
+				inset-inline-end: 0;
 				bottom: 0;
 				width: 100%;
 				height: 160px;
@@ -1165,8 +1165,8 @@
 
 	&.style-2 {
 		max-width: 640px;
-		margin-left: auto;
-		margin-right: auto;
+		margin-inline-start: auto;
+		margin-inline-end: auto;
 	}
 
 	h4 {
@@ -1199,8 +1199,8 @@
 	.content {
 		position: absolute;
 		bottom: 18px;
-		left: 16px;
-		right: 16px;
+		inset-inline-start: 16px;
+		inset-inline-end: 16px;
 		z-index: 12;
 		padding: 17px 24px;
 		border-radius: 12px;
@@ -1230,8 +1230,8 @@
 	&::after {
 		content: "";
 		position: absolute;
-		left: 0;
-		right: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
 		bottom: 0;
 		width: 100%;
 		height: 270px;
@@ -1246,8 +1246,8 @@
 	&.style-1 {
 		.content {
 			bottom: 12px;
-			left: 12px;
-			right: 12px;
+			inset-inline-start: 12px;
+			inset-inline-end: 12px;
 			padding: 12px 16px;
 
 			.sub-title {
@@ -1326,8 +1326,8 @@
 		content: "";
 		position: absolute;
 		top: 0;
-		left: 0;
-		right: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
 		bottom: 0;
 		width: 100%;
 		height: 100%;
@@ -1351,11 +1351,11 @@
 		z-index: 123;
 
 		&.swiper-nav-next {
-			left: 60px;
+			inset-inline-start: 60px;
 		}
 
 		&.swiper-nav-prev {
-			right: 60px;
+			inset-inline-end: 60px;
 		}
 	}
 }
@@ -1583,8 +1583,8 @@
 
 					&::before {
 						width: 100%;
-						left: 0;
-						right: auto;
+						inset-inline-start: 0;
+						inset-inline-end: auto;
 					}
 				}
 			}
@@ -1631,7 +1631,7 @@
 	align-items: center;
 
 	.box-left {
-		padding-right: 100px;
+		padding-inline-end: 100px;
 
 		p {
 			font-size: 16px;
@@ -1661,7 +1661,7 @@
 
 			&:last-child,
 			&:nth-child(2) {
-				padding-left: 45px;
+				padding-inline-start: 45px;
 			}
 		}
 	}
@@ -1671,8 +1671,8 @@
 	}
 
 	.box-right {
-		padding-left: 80px;
-		padding-right: 40px;
+		padding-inline-start: 80px;
+		padding-inline-end: 40px;
 
 		.box-service:not(:last-child) {
 			margin-bottom: 20px;
@@ -1703,7 +1703,7 @@
 
 	.inner-service-left {
 		padding-top: 8px;
-		padding-right: 94px;
+		padding-inline-end: 94px;
 		flex-shrink: 0;
 
 		.img-service {
@@ -1717,7 +1717,7 @@
 
 	.box-avatar {
 		position: absolute;
-		left: -111px;
+		inset-inline-start: -111px;
 		top: 25%;
 		transform: rotate(-16deg);
 		display: inline-flex;
@@ -1744,14 +1744,14 @@
 				border: 2px solid $white;
 				border-radius: 50%;
 				bottom: 0;
-				right: -2px;
+				inset-inline-end: -2px;
 			}
 		}
 	}
 
 	.box-trader {
 		position: absolute;
-		right: -50px;
+		inset-inline-end: -50px;
 		bottom: 13%;
 		transform: rotate(16deg);
 		background-color: transparent;
@@ -1772,7 +1772,7 @@
 	}
 
 	.inner-service-right {
-		padding-right: 89px;
+		padding-inline-end: 89px;
 
 		.box-title {
 			margin-bottom: 50px;
@@ -1956,7 +1956,7 @@
 		grid-template-columns: 1fr 1fr;
 		column-gap: 36px;
 		row-gap: 30px;
-		padding-left: 70px;
+		padding-inline-start: 70px;
 	}
 
 	.box-navigation {
@@ -2126,7 +2126,7 @@
 // testimonial
 .box-tes-item {
 	padding: 40px;
-	padding-left: 32px;
+	padding-inline-start: 32px;
 	border-radius: 20px;
 	background-color: $white;
 
@@ -2161,15 +2161,15 @@
 			position: absolute;
 			z-index: 12;
 			bottom: 24px;
-			left: 40px;
-			right: 60px;
+			inset-inline-start: 40px;
+			inset-inline-end: 60px;
 		}
 
 		&::after {
 			content: "";
 			position: absolute;
-			left: 0;
-			right: 0;
+			inset-inline-start: 0;
+			inset-inline-end: 0;
 			bottom: 0;
 			width: 100%;
 			height: 127px;
@@ -2208,7 +2208,7 @@
 	overflow: hidden;
 	background-color: $surface;
 	height: 100%;
-	margin-left: -30px;
+	margin-inline-start: -30px;
 	padding: 60px 60px 30px 60px;
 
 	.tf-sw-testimonial {
@@ -2282,8 +2282,8 @@
 	&::before {
 		position: absolute;
 		content: "";
-		left: 0;
-		right: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
 		top: 0;
 		height: 400px;
 		background: $on-surface;
@@ -2308,8 +2308,8 @@
 			border-radius: 8px;
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
-			left: 37px;
-			right: 37px;
+			inset-inline-start: 37px;
+			inset-inline-end: 37px;
 			opacity: 0;
 			visibility: hidden;
 			@include transition3;
@@ -2322,7 +2322,7 @@
 
 			li {
 				&:not(:last-child) {
-					border-right: 1px solid $outline;
+					border-inline-end: 1px solid $outline;
 				}
 
 				&:hover {
@@ -2383,8 +2383,8 @@
 		.agent-social {
 			bottom: 23px;
 			top: 23px;
-			right: 0;
-			left: unset;
+			inset-inline-end: 0;
+			inset-inline-start: unset;
 			padding: 0px 12px;
 			grid-template-columns: repeat(1, 1fr);
 			z-index: 1;
@@ -2394,7 +2394,7 @@
 				@include flex(center, center);
 
 				&:not(:last-child) {
-					border-right: 0;
+					border-inline-end: 0;
 					border-bottom: 1px solid $outline;
 				}
 			}
@@ -2420,7 +2420,7 @@
 		&.style-1 {
 			.box-img {
 				.agent-social {
-					right: 16px;
+					inset-inline-end: 16px;
 				}
 			}
 		}
@@ -2563,8 +2563,8 @@
 	&::before {
 		position: absolute;
 		top: 0;
-		left: 0;
-		right: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
 		bottom: 0;
 		width: 100%;
 		height: 100%;
@@ -2717,11 +2717,11 @@
 	}
 
 	.swiper-nav-next {
-		left: 20px;
+		inset-inline-start: 20px;
 	}
 
 	.swiper-nav-prev {
-		right: 20px;
+		inset-inline-end: 20px;
 	}
 }
 
@@ -2735,7 +2735,7 @@
 .marker-container {
 	position: relative;
 	top: 25px;
-	left: 10px;
+	inset-inline-start: 10px;
 	width: 46px;
 	height: 46px;
 	z-index: 1;
@@ -2825,7 +2825,7 @@
 }
 
 #map .infoBox {
-	margin-left: 190px;
+	margin-inline-start: 190px;
 	margin-bottom: -120px;
 }
 
@@ -2835,7 +2835,7 @@
 
 .map-listing-item .infoBox-close {
 	position: absolute;
-	right: 8px;
+	inset-inline-end: 8px;
 	top: 8px;
 	width: 24px;
 	height: 24px;
@@ -3003,14 +3003,14 @@
 		width: 45.3%;
 		position: fixed;
 		height: calc(100vh - 188px);
-		right: 0;
+		inset-inline-end: 0;
 		bottom: 0;
 
 		#map {
 			position: absolute;
 			height: 100%;
 			width: 100%;
-			left: 0;
+			inset-inline-start: 0;
 			top: 0;
 		}
 	}
@@ -3087,7 +3087,7 @@
 	.wrap-map {
 		height: calc(100vh - 80px);
 		width: 29.4%;
-		right: 0;
+		inset-inline-end: 0;
 		bottom: 0;
 		position: fixed;
 
@@ -3095,7 +3095,7 @@
 			position: absolute;
 			height: 100%;
 			width: 100%;
-			left: 0;
+			inset-inline-start: 0;
 			top: 0;
 		}
 	}
@@ -3203,8 +3203,8 @@
 			position: absolute;
 			content: "";
 			top: 0;
-			left: 0;
-			right: 0;
+			inset-inline-start: 0;
+			inset-inline-end: 0;
 			bottom: 0;
 			background-color: rgba(0, 0, 0, 0.5019607843);
 			opacity: 0;
@@ -3267,11 +3267,11 @@
 
 	.navigation {
 		&.swiper-nav-next {
-			left: 40px;
+			inset-inline-start: 40px;
 		}
 
 		&.swiper-nav-prev {
-			right: 40px;
+			inset-inline-end: 40px;
 		}
 	}
 
@@ -3280,7 +3280,7 @@
 		display: flex;
 		align-items: center;
 		gap: 10px;
-		right: 36px;
+		inset-inline-end: 36px;
 		top: 20px;
 		z-index: 12;
 
@@ -3497,7 +3497,7 @@
 }
 
 .single-property-video {
-	padding-right: 55px;
+	padding-inline-end: 55px;
 
 	.title {
 		margin-bottom: 20px;
@@ -3786,7 +3786,7 @@
 
 		.box-top {
 			padding: 20px;
-			padding-right: 40px;
+			padding-inline-end: 40px;
 			display: grid;
 			grid-template-columns: 1fr 1fr;
 			row-gap: 20px;
@@ -3831,7 +3831,7 @@
 }
 
 .wrapper-sidebar-right {
-	padding-left: 30px;
+	padding-inline-start: 30px;
 }
 
 .single-property-contact {
@@ -3920,8 +3920,8 @@
 	.cate-single-tab {
 		overflow-x: auto;
 		display: flex;
-		margin-right: -15px;
-		padding-right: 15px;
+		margin-inline-end: -15px;
+		padding-inline-end: 15px;
 
 		&::-webkit-scrollbar {
 			width: 1px;
@@ -4028,7 +4028,7 @@
 
 .wrapper-sidebar-right {
 	.box-latest-property {
-		padding-right: 0px;
+		padding-inline-end: 0px;
 	}
 }
 
@@ -4047,7 +4047,7 @@
 		.box-btn {
 			position: absolute;
 			bottom: 20px;
-			right: 20px;
+			inset-inline-end: 20px;
 			display: flex;
 			gap: 12px;
 
@@ -4146,11 +4146,11 @@
 			background-color: $surface;
 
 			&.swiper-nav-next {
-				left: -35px;
+				inset-inline-start: -35px;
 			}
 
 			&.swiper-nav-prev {
-				right: -35px;
+				inset-inline-end: -35px;
 			}
 
 			&:hover,
@@ -4176,7 +4176,7 @@
 	}
 
 	.single-property-video {
-		padding-right: 0;
+		padding-inline-end: 0;
 	}
 
 	.single-property-map {
@@ -4220,8 +4220,8 @@
 				background: #64666c;
 				content: "";
 				display: block;
-				margin-left: 9px;
-				margin-right: 10px;
+				margin-inline-start: 9px;
+				margin-inline-end: 10px;
 				margin-top: 12px;
 				flex-shrink: 0;
 			}
@@ -4253,7 +4253,7 @@
 
 		.faq-header {
 			padding: 20px 0px;
-			padding-right: 30px;
+			padding-inline-end: 30px;
 			display: block;
 			font-size: 20px;
 			line-height: 28px;
@@ -4265,7 +4265,7 @@
 				position: absolute;
 				content: "\e917";
 				font-family: $fontIcon;
-				right: 0px;
+				inset-inline-end: 0px;
 				top: 50%;
 				transform: translateY(-50%);
 				@include transition5;
@@ -4379,7 +4379,7 @@
 		.tag {
 			position: absolute;
 			color: $on-surface;
-			right: 20px;
+			inset-inline-end: 20px;
 			top: 20px;
 		}
 	}
@@ -4461,8 +4461,8 @@
 		content: "";
 		position: absolute;
 		top: 0;
-		left: 0;
-		right: 0;
+		inset-inline-start: 0;
+		inset-inline-end: 0;
 		bottom: 0;
 		background: $on-surface;
 		opacity: 0.8;
@@ -4478,7 +4478,7 @@
 		}
 
 		.content-left {
-			padding-right: 210px;
+			padding-inline-end: 210px;
 		}
 	}
 }
@@ -4513,7 +4513,7 @@
 
 .flat-contact {
 	.contact-content {
-		padding-right: 110px;
+		padding-inline-end: 110px;
 
 		h5 {
 			margin-bottom: 12px;
@@ -4644,11 +4644,11 @@
 		}
 
 		&::before {
-			left: 0;
+			inset-inline-start: 0;
 		}
 
 		&::after {
-			right: 0;
+			inset-inline-end: 0;
 		}
 	}
 
@@ -4685,7 +4685,7 @@
 	}
 
 	.noti a {
-		margin-left: 4px;
+		margin-inline-start: 4px;
 		border-bottom: 1px solid $on-surface;
 	}
 }
@@ -4694,14 +4694,14 @@
 	position: relative;
 
 	.form-control {
-		padding-right: 40px;
+		padding-inline-end: 40px;
 	}
 
 	.show-pass,
 	.show-pass2,
 	.show-pass3 {
 		position: absolute;
-		right: 16px;
+		inset-inline-end: 16px;
 		top: 16px;
 		cursor: pointer;
 
@@ -4739,7 +4739,7 @@
 		.close-modal {
 			position: absolute;
 			top: 20px;
-			right: 20px;
+			inset-inline-end: 20px;
 			font-size: 18px;
 			cursor: pointer;
 		}
@@ -4762,7 +4762,7 @@
 .progress-wrap {
 	position: fixed;
 	bottom: 30px;
-	right: 30px;
+	inset-inline-end: 30px;
 	height: 44px;
 	width: 44px;
 	cursor: pointer;
@@ -4797,7 +4797,7 @@
 		font-size: 14px;
 		font-weight: 900;
 		color: $primary;
-		left: 0;
+		inset-inline-start: 0;
 		top: 0;
 		height: 44px;
 		width: 44px;
@@ -4828,7 +4828,7 @@
 
 	.close {
 		font-size: 12px;
-		margin-left: 10px;
+		margin-inline-start: 10px;
 		color: $success;
 	}
 }

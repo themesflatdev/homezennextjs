@@ -1,8 +1,10 @@
-
+'use client'
 import Link from "next/link"
 import CountetNumber from "../elements/CountetNumber"
+import { useDirection } from "@/context/DirectionContext"
 
 export default function Service4() {
+	const { isRTL } = useDirection()
 	return (
 		<>
 
@@ -52,7 +54,7 @@ export default function Service4() {
 									<div className="content">
 										<h6 className="title">Buy A New Home</h6>
 										<p className="description">Explore diverse properties and expert guidance for a seamless buying experience.</p>
-										<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className="icon icon-arrow-right2" /> </Link>
+										<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 									</div>
 								</li>
 								<li className="box-service hover-btn-view style-4">
@@ -62,7 +64,7 @@ export default function Service4() {
 									<div className="content">
 										<h6 className="title">Rent a homee</h6>
 										<p className="description">Explore a diverse variety of listings tailored precisely to suit your unique lifestyle needs.</p>
-										<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className="icon icon-arrow-right2" /> </Link>
+										<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 									</div>
 								</li>
 								<li className="box-service hover-btn-view style-4">
@@ -72,7 +74,7 @@ export default function Service4() {
 									<div className="content">
 										<h6 className="title">Buy A New Home</h6>
 										<p className="description">Showcasing your property's best features for a successful sale.</p>
-										<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className="icon icon-arrow-right2" /> </Link>
+										<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 									</div>
 								</li>
 							</ul>

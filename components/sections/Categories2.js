@@ -32,8 +32,10 @@ const swiperOptions = {
 		},
 }
 import Link from "next/link"
+import { useDirection } from "@/context/DirectionContext"
 
 export default function Categories2() {
+	const { direction } = useDirection()
 	return (
 		<>
 
@@ -44,7 +46,7 @@ export default function Categories2() {
 						<h4 className="mt-4 text-white">Try Searching For</h4>
 					</div>
 					<div className="swiper tf-sw-categories wow fadeInUpSmall" data-wow-delay=".4s" data-wow-duration="2000ms" data-preview-lg={5} data-preview-md={4} data-preview-sm={3} data-space={40}>
-						<Swiper {...swiperOptions} className="swiper-wrapper">
+						<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 							<SwiperSlide>
 								<Link href="#" className="homeya-categories style-1">
 									<div className="box-icon w-80 round">

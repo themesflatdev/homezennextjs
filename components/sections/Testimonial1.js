@@ -2,6 +2,7 @@
 'use client'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useDirection } from "@/context/DirectionContext"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -33,6 +34,7 @@ const swiperOptions = {
 	},
 }
 export default function Testimonial1() {
+	const { direction } = useDirection()
 	return (
 		<>
 
@@ -52,7 +54,7 @@ export default function Testimonial1() {
 						</div>
 						<div className="col-lg-9">
 							<div className="swiper tf-sw-testimonial">
-								<Swiper {...swiperOptions} className="swiper-wrapper">
+								<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 									<SwiperSlide>
 										<div className="box-tes-item wow fadeIn" data-wow-delay=".2s" data-wow-duration="2000ms">
 											<ul className="list-star">

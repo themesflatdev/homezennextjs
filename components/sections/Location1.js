@@ -1,6 +1,7 @@
 'use client'
 import { Autoplay, Navigation, Pagination } from "swiper/modules"
 import { Swiper, SwiperSlide } from "swiper/react"
+import { useDirection } from "@/context/DirectionContext"
 
 const swiperOptions = {
 	modules: [Autoplay, Pagination, Navigation],
@@ -46,6 +47,7 @@ const swiperOptions = {
 import Link from "next/link"
 
 export default function Location1() {
+	const { direction } = useDirection()
 	return (
 		<>
 
@@ -57,7 +59,7 @@ export default function Location1() {
 					</div>
 					<div className="wow fadeInUpSmall" data-wow-delay=".4s" data-wow-duration="2000ms">
 						<div className="swiper tf-sw-location overlay">
-							<Swiper {...swiperOptions} className="swiper-wrapper">
+							<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 								<SwiperSlide>
 									<Link href="#" className="box-location">
 										<div className="image">

@@ -34,7 +34,9 @@ const swiperOptions = {
 import Layout from "@/components/layout/Layout"
 import Link from "next/link"
 import { useState } from "react"
+import { useDirection } from "@/context/DirectionContext"
 export default function OurService() {
+	const { direction } = useDirection()
 	const [isAccordion, setIsAccordion] = useState(1)
 
 	const handleAccordion = (key) => {
@@ -109,7 +111,7 @@ export default function OurService() {
 								</div>
 								<div className="col-lg-9">
 									<div className="swiper tf-sw-testimonial">
-										<Swiper {...swiperOptions} className="swiper-wrapper">
+										<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 											<SwiperSlide>
 												<div className="box-tes-item">
 													<ul className="list-star">

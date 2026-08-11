@@ -20,15 +20,17 @@ const swiperOptions = {
 	},
 }
 import Link from "next/link"
+import { useDirection } from "@/context/DirectionContext"
 
 export default function Categories3() {
+	const { direction } = useDirection()
 	return (
 		<>
 
 			<section className="flat-categories-v3">
 				<div className="wrap-categories-v3">
 					<div className="swiper tf-sw-auto sw-auto" data-loop="true">
-						<Swiper {...swiperOptions} className="swiper-wrapper">
+						<Swiper {...swiperOptions} key={direction} dir={direction} className="swiper-wrapper">
 							<SwiperSlide>
 								<Link href="#" className="homeya-categories-v2">
 									<div className="icon-box">

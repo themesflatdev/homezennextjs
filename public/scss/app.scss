@@ -48,6 +48,9 @@
 /*-------------- Responsive ----------------- */
 @import "./responsive";
 
+/*-------------- RTL overrides ----------------- */
+@import "./rtl";
+
 
 
 .leaflet-popup-content {
@@ -97,7 +100,7 @@
 	font-size: 14px;
 	line-height: 26px;
 	color: #D01818;
-	margin-left: 4px;
+	margin-inline-start: 4px;
 }
 
 // range two

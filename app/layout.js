@@ -7,6 +7,8 @@ import "/public/css/animate.css"
 import "/public/css/styles.css"
 
 import { DM_Sans, Josefin_Sans } from 'next/font/google'
+import Script from 'next/script'
+import { DirectionProvider, directionBootstrapScript } from '@/context/DirectionContext'
 
 const dm = DM_Sans({
 	weight: ['300', '400', '500', '600', '700'],
@@ -32,8 +34,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
 	return (
-		<html lang="en">
-			<body className={`${dm.variable} ${josefin.variable} body`}>{children}</body>
+		<html lang="en" suppressHydrationWarning>
+			<body className={`${dm.variable} ${josefin.variable} body`} suppressHydrationWarning>
+				<Script id="direction-bootstrap" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: directionBootstrapScript }} />
+				<DirectionProvider>{children}</DirectionProvider>
+			</body>
 		</html>
 	)
 }

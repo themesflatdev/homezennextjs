@@ -2,6 +2,7 @@
 
 import Link from 'next/link'
 import { useState } from 'react'
+import DirectionToggle from '../elements/DirectionToggle'
 
 export default function OffcanvasMenu({ isOffcanMenu, handleOffcanMenu, isLogin, handleLogin, isRegister, handleRegister }) {
 
@@ -20,10 +21,13 @@ export default function OffcanvasMenu({ isOffcanMenu, handleOffcanMenu, isLogin,
 					<span className="icon-close2 icon-close-popup" onClick={handleOffcanMenu} />
 				</div>
 				<div className="off-canvas-body">
-					<div className="login-box">
-						<a onClick={handleLogin}>Login</a>
-						<span>/</span>
-						<a onClick={handleRegister}>Register</a>
+					<div className="login-box d-flex align-items-center justify-content-between">
+						<div>
+							<a onClick={handleLogin}>Login</a>
+							<span>/</span>
+							<a onClick={handleRegister}>Register</a>
+						</div>
+						<DirectionToggle />
 					</div>
 					<ul className="menu-outer" id="wrapper-menu-navigation">
 						<li className="nav-menu-item">

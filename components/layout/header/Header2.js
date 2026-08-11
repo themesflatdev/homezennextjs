@@ -1,4 +1,5 @@
 import Link from "next/link"
+import DirectionToggle from "../../elements/DirectionToggle"
 
 export default function Header2({
 	handleLogin,
@@ -36,6 +37,7 @@ export default function Header2({
 									<a className="btn-search btn-search-mb" onClick={handleOffcanMobile}><span className="icon icon-search" /></a>
 								</div>
 								<div className="header-account">
+									<DirectionToggle className="header-direction-toggle" />
 									<div className="register">
 										<ul className="d-flex">
 											<li><a onClick={handleLogin}>Login</a></li>

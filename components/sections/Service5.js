@@ -1,7 +1,9 @@
-
+'use client'
 import Link from "next/link"
+import { useDirection } from "@/context/DirectionContext"
 
 export default function Service5() {
+	const { isRTL } = useDirection()
 	return (
 		<>
 
@@ -20,7 +22,7 @@ export default function Service5() {
 								<div className="content">
 									<h6 className="title">Buy A New Home</h6>
 									<p className="description">Discover your dream home effortlessly. Explore diverse properties and expert guidance for a seamless buying experience.</p>
-									<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className="icon icon-arrow-right2" /> </Link>
+									<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 								</div>
 							</div>
 						</div>
@@ -32,7 +34,7 @@ export default function Service5() {
 								<div className="content">
 									<h6 className="title">Rent a home</h6>
 									<p className="description">Discover your perfect rental effortlessly. Explore a diverse variety of listings tailored precisely to suit your unique lifestyle needs.</p>
-									<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className="icon icon-arrow-right2" /> </Link>
+									<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 								</div>
 							</div>
 						</div>
@@ -44,7 +46,7 @@ export default function Service5() {
 								<div className="content">
 									<h6 className="title">Sell a home</h6>
 									<p className="description">Sell confidently with expert guidance and effective strategies, showcasing your property's best features for a successful sale.</p>
-									<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className="icon icon-arrow-right2" /> </Link>
+									<Link href="#" className="btn-view style-1"><span className="text">Learn More</span> <span className={`icon ${isRTL ? "icon-arrow-left2" : "icon-arrow-right2"}`} /> </Link>
 								</div>
 							</div>
 						</div>

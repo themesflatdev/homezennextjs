@@ -1,0 +1,108 @@
+/* ---------------------------------------------------------
+    RTL manual overrides
+
+    Most of the site flips correctly for [dir="rtl"] automatically,
+    because layout/spacing was converted to CSS logical properties
+    (margin-inline-*, padding-inline-*, inset-inline-*, text-align:
+    start/end) - those already resolve to the mirrored physical side
+    on their own, so they need no rules here.
+
+    This file only contains the handful of cases logical properties
+    cannot cover on their own:
+      - transform: translateX(...) offsets (transforms are always
+        physical, never direction-aware)
+      - the vendored Bootstrap CSS (bootstrap.min.css), which has no
+        matching bootstrap.rtl.min.css build in this project
+      - directional icon-font glyphs (arrows/chevrons)
+      - a few data types that should stay LTR even inside an RTL page
+------------------------------------------------------------------------------ */
+
+// Dashboard sidebar off-canvas slide (LayoutAdmin.js / Sidebar.js)
+// Desktop: sidebar is visible by default, `.full-width` toggle hides it.
+@media only screen and (min-width: 1441px) {
+    [dir="rtl"] .layout-wrap.full-width .sidebar-menu-dashboard {
+        transform: translateX(100%);
+    }
+}
+
+// Below 1440px the roles invert: sidebar is hidden by default and the
+// `.full-width` toggle brings it in as an overlay - only mirror the
+// hidden (untoggled) state, the shown state is transform:translateX(0)
+// already and needs no change.
+@media only screen and (max-width: 1440px) {
+    [dir="rtl"] .layout-wrap:not(.full-width) .sidebar-menu-dashboard {
+        transform: translateX(100%);
+    }
+}
+
+// Decorative underline dash next to quote author name - anchored with a
+// fixed 10px inset (not a symmetric 50/50 centering trick), so the
+// translateX offset needs its own mirror.
+[dir="rtl"] .flat-quote .author::before {
+    transform: translateX(50%);
+}
+
+// Bootstrap's offcanvas component (used by OffcanvasMenu / OffcanvasMobileFilter)
+// ships only as a physical-LTR build in this project (public/css/bootstrap.min.css),
+// there is no bootstrap.rtl.min.css vendored, so `.offcanvas-start` is mirrored
+// by hand to slide in from the visual start edge (right, in RTL).
+[dir="rtl"] .offcanvas.offcanvas-start {
+    left: auto;
+    right: 0;
+    border-right: 0;
+    border-left: var(--bs-offcanvas-border-width) solid var(--bs-offcanvas-border-color);
+    transform: translateX(100%);
+}
+
+// `.btn-view` hover effect ("View All" / "Learn More" links, icon-arrow-right2):
+// the icon nudges out and back in the reading direction. transform: translateX
+// is always physical, so under RTL it needs its own mirrored keyframes rather
+// than relying on the base `link-icon` animation from component/_button.scss.
+@keyframes link-icon-rtl {
+    49% {
+        opacity: 1;
+        transform: translateX(-10px);
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    51% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+[dir="rtl"] .btn-view:hover .icon,
+[dir="rtl"] .hover-btn-view:hover .btn-view.style-1 .icon {
+    animation-name: link-icon-rtl;
+}
+
+// Directional icon-font glyphs: flip only the icons that actually point
+// left/right (arrows/chevrons used for prev/next, carousel nav, etc).
+// Symmetric/decorative icons (stars, compare, phone, mail, down-caret,
+// logos...) are intentionally left untouched.
+//
+// icon-arrow-right2/icon-arrow-left2 (used by `.btn-view`) are NOT mirrored
+// here - those components swap the class directly in JSX via useDirection()
+// (e.g. components/sections/Categories1.js, Location3.js, Service1/2/4/5.js,
+// app/about-us/page.js), rendering the correct pre-drawn glyph. Mirroring
+// them here too would flip an already-correct icon back to the wrong way.
+[dir="rtl"] .icon-arr-r,
+[dir="rtl"] .icon-arr-l {
+    display: inline-block;
+    transform: scaleX(-1);
+}
+
+// Data that is always written/read LTR even on an RTL page - keep it
+// legible instead of literally mirroring the characters.
+[dir="rtl"] input[type="email"],
+[dir="rtl"] input[type="tel"],
+[dir="rtl"] input[type="url"],
+[dir="rtl"] input[type="number"] {
+    direction: ltr;
+    text-align: right;
+}

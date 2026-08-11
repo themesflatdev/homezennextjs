@@ -1,6 +1,6 @@
 // dashboard
 .header-dashboard {
-    padding-left: 20px;
+    padding-inline-start: 20px;
     .logo-box {
         display: flex;
         align-items: center;
@@ -18,11 +18,11 @@
         }
     }
     .main-menu {
-        margin-left: -245px;
+        margin-inline-start: -245px;
     }
     .header-account {
         .box-avatar {
-            margin-right: 20px;
+            margin-inline-end: 20px;
             display: flex;
             align-items: center;
             gap: 12px;
@@ -94,7 +94,7 @@
     box-shadow: 0px 2px 2px 0px #1c24331a;
     height: 100%;
     top: 80px;
-    left: 0;
+    inset-inline-start: 0;
     bottom: 0;
     overflow-y: auto;
     z-index: 20;
@@ -175,7 +175,7 @@
 .layout-wrap {
     .main-content {
         // min-height: 100vh;
-        padding-left: 280px;
+        padding-inline-start: 280px;
         @include transition4;
         .footer-dashboard {
             padding: 14px;
@@ -185,8 +185,8 @@
         .footer-dashboard-2 {
             position: fixed;
             bottom: 0;
-            left: 0;
-            right: 0;
+            inset-inline-start: 0;
+            inset-inline-end: 0;
         }
 
         .wd-listing {
@@ -199,7 +199,7 @@
             transform: translateX(-100%);
         }
         .main-content {
-            padding-left: 0;
+            padding-inline-start: 0;
         }
     }
     .main-content-inner {
@@ -290,12 +290,12 @@
                 border-bottom: 1px solid $outline;
 
                 &:not(:first-child) {
-                    border-left: 1px solid $outline;
+                    border-inline-start: 1px solid $outline;
                     text-align: center;
                 }
                 &:last-child {
                     text-align: center;
-                    padding-left: 40px;
+                    padding-inline-start: 40px;
                 }
             }
         }
@@ -507,9 +507,9 @@ tr {
         .ip-file {
             position: absolute;
             top: 0;
-            right: 0;
+            inset-inline-end: 0;
             bottom: 0;
-            left: 0;
+            inset-inline-start: 0;
             width: 100%;
             padding: 0;
             margin: 0;
@@ -539,7 +539,7 @@ tr {
         position: relative;
         .btn-location {
             position: absolute;
-            right: 6px;
+            inset-inline-end: 6px;
             top: 6px;
             bottom: 6px;
             width: 36px;
@@ -631,7 +631,7 @@ tr {
     justify-content: space-between;
     gap: 15px;
     flex-wrap: wrap;
-    padding-right: 100px;
+    padding-inline-end: 100px;
     .title-amenities {
         margin-bottom: 12px;
     }
@@ -695,7 +695,7 @@ tr {
     .ip-datepicker {
         height: 48px;
         padding: 10px 16px;
-        padding-right: 32px;
+        padding-inline-end: 32px;
         background-color: transparent;
         position: relative;
         z-index: 1;
@@ -711,7 +711,7 @@ tr {
             position: absolute;
             content: "\e909";
             font-family: $fontIcon;
-            right: 16px;
+            inset-inline-end: 16px;
             top: 50%;
             transform: translateY(-50%);
         }
