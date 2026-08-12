@@ -9,6 +9,7 @@ import "/public/css/styles.css"
 import { DM_Sans, Josefin_Sans } from 'next/font/google'
 import Script from 'next/script'
 import { DirectionProvider, directionBootstrapScript } from '@/context/DirectionContext'
+import DirectionToggle from '@/components/elements/DirectionToggle'
 
 const dm = DM_Sans({
 	weight: ['300', '400', '500', '600', '700'],
@@ -37,7 +38,10 @@ export default function RootLayout({ children }) {
 		<html lang="en" suppressHydrationWarning>
 			<body className={`${dm.variable} ${josefin.variable} body`} suppressHydrationWarning>
 				<Script id="direction-bootstrap" strategy="beforeInteractive" dangerouslySetInnerHTML={{ __html: directionBootstrapScript }} />
-				<DirectionProvider>{children}</DirectionProvider>
+				<DirectionProvider>
+					{children}
+					<DirectionToggle />
+				</DirectionProvider>
 			</body>
 		</html>
 	)

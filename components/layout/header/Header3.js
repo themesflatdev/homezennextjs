@@ -3,7 +3,6 @@ import Link from "next/link"
 import { useState } from "react"
 import Menu from "../Menu"
 import MobileMenu from "../MobileMenu"
-import DirectionToggle from "../../elements/DirectionToggle"
 
 export default function Header3({ scroll, isSidebar, handleSidebar, isMobileMenu, handleMobileMenu }) {
 	const [isToggled, setToggled] = useState(false)
@@ -34,7 +33,6 @@ export default function Header3({ scroll, isSidebar, handleSidebar, isMobileMenu
 									{/* Main Menu End*/}
 								</div>
 								<div className="header-account">
-									<DirectionToggle className="header-direction-toggle" />
 									<a onClick={handleToggle} className={`box-avatar dropdown-toggle ${isToggled ? "show" : ""}`}>
 										<div className="avatar avt-40 round">
 											<img src="/images/avatar/avt-2.jpg" alt="avt" />
@@ -80,9 +78,6 @@ export default function Header3({ scroll, isSidebar, handleSidebar, isMobileMenu
 								<div className="box d-flex align-items-center">
 									<span className="icon icon-mail" />
 									<div>themesflat@gmail.com</div>
-								</div>
-								<div className="box d-flex align-items-center">
-									<DirectionToggle />
 								</div>
 							</div>
 						</div>
